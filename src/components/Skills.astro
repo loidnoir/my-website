@@ -1,0 +1,108 @@
+---
+import { Icon } from 'astro-icon'
+---
+
+<div
+  class="flex flex-col basis-1/2 gap-4 px-5 py-4 lg:px-10 lg:py-8 border border-white/60 bg-white/5 rounded-md text-white"
+>
+  <h2 class="text-4xl font-bold font-roboto">My Skills</h2>
+  <div class="flex flex-col lg:flex-row justify-between gap-4 font-pixel">
+    <div class="flex basis-1/2 justify-between">
+      <ul class="flex flex-col gap-2 sm:basis-1/2">
+        <li
+          class="flex gap-2 text-white/80 hover:text-cyan-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="cib:typescript" />
+          <p>TypeScript</p>
+        </li>
+        <li
+          class="flex gap-2 text-white/80 hover:text-lime-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="fontisto:nodejs" />
+          <p>Node.js</p>
+        </li>
+        <li
+          class="flex gap-2 text-white/80 hover:text-red-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="bi:git" />
+          <p>Git</p>
+        </li>
+      </ul>
+      <ul class="flex flex-col gap-2 sm:basis-1/2">
+        <li
+          class="flex gap-2 text-white/80 hover:text-cyan-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="akar-icons:react-fill" />
+          <p>React</p>
+        </li>
+        <li
+          class="flex gap-2 text-white/80 hover:text-gray-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="akar-icons:nextjs-fill" />
+          <p>Next</p>
+        </li>
+        <li
+          class="flex gap-2 text-white/80 hover:text-orange-500 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="simple-icons:astro" />
+          <p>Astro</p>
+        </li>
+        <li
+          class="flex gap-2 text-white/80 hover:text-cyan-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="file-icons:tailwind" />
+          <p>Tailwind</p>
+        </li>
+      </ul>
+    </div>
+    <hr class="block lg:hidden opacity-20" />
+    <div class="flex basis-1/2 justify-between">
+      <ul class="flex flex-col gap-2 sm:basis-1/2">
+        <li
+          class="flex gap-2 text-white/80 hover:text-gray-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="file-icons:prisma" />
+          <p>Prisma</p>
+        </li>
+        <li
+          class="flex gap-2 text-white/80 hover:text-sky-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="cib:postgresql" />
+          <p>Postgres</p>
+        </li>
+        <li
+          class="flex gap-2 text-white/80 hover:text-green-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="cib:mongodb" />
+          <p>MongoDB</p>
+        </li>
+      </ul>
+      <ul class="flex flex-col gap-2 sm:basis-1/2">
+        <li
+          class="flex gap-2 text-white/80 hover:text-cyan-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="simple-icons:adobephotoshop" />
+          <p>Photoshop</p>
+        </li>
+        <li
+          class="flex gap-2 text-white/80 hover:text-orange-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="simple-icons:adobeillustrator" />
+          <p>Illustrator</p>
+        </li>
+        <li
+          class="flex gap-2 text-white/80 hover:text-pink-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="simple-icons:figma" />
+          <p>Figma</p>
+        </li>
+        <li
+          class="flex gap-2 text-white/80 hover:text-gray-400 hover:cursor-pointer"
+        >
+          <Icon width="20px" name="simple-icons:aseprite" />
+          <p>Aseprite</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
