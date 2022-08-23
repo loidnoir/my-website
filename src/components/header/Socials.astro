@@ -1,0 +1,50 @@
+---
+import Icon from 'astro-icon'
+
+interface networksInterface {
+  name: string
+  url: string
+  icon: string
+  color: string
+}
+
+const networks: networksInterface[] = [
+  {
+    name: 'Loid#1241',
+    url: 'https://discordapp.com/users/690728155052245072',
+    icon: 'akar-icons:discord-fill',
+    color: ' hover:text-indigo-500',
+  },
+  {
+    name: 'LoidNoir',
+    url: 'https://github.com/loidnoir',
+    icon: 'akar-icons:github-fill',
+    color: 'hover:text-white',
+  },
+  {
+    name: 'Loid',
+    url: 'https://linked.in/loid',
+    icon: 'akar-icons:linkedin-fill',
+    color: 'hover:text-sky-400',
+  },
+]
+---
+
+<div
+  class='flex md:flex-col justify-evenly gap-4 px-5 md:px-10 py-4 md:py-8 border border-white/60 bg-white/5 rounded-md'
+>
+  {
+    networks.map((network) => {
+      return (
+        <a
+          class={`flex gap-2  text-white/60 ${network.color} text-xs md:text-lg font-pixel cursor-pointer`}
+          href={network.url}
+          target='_blank'
+        >
+          <Icon width='20px' name={network.icon} />
+          <p class='hidden xl:block'>{network.name}</p>
+        </a>
+      )
+    })
+  }
+</div>
