@@ -1,114 +1,107 @@
 ---
 import Icon from 'astro-icon'
 
+let count = 0
 interface technologie {
-  name: string
-  icon: string
-  color: string
+    name: string
+    icon: string
+    color: string
 }
 
 const technologies: technologie[][] = [
-  [
-    {
-      name: 'TypeScript',
-      color: 'hover:text-cyan-400',
-      icon: 'simple-icons:typescript'
-    },
-    {
-      name: 'Node.js',
-      color: 'hover:text-lime-400',
-      icon: 'fontisto:nodejs',
-    },
-    {
-      name: 'Docker',
-      color: 'hover:text-sky-400',
-      icon: 'cib:docker',
-    },
-    {
-      name: 'Git',
-      color: 'hover:text-red-400',
-      icon: 'bi:git',
-    }
-  ],
-  [
-    {
-      name: 'React',
-      color: 'hover:text-cyan-400',
-      icon: 'akar-icons:react-fill',
-    },
-    {
-      name: 'Next',
-      color: 'hover:text-white',
-      icon: 'akar-icons:nextjs-fill',
-    },
-    {
-      name: 'Astro',
-      color: 'hover:text-orange-500',
-      icon: 'simple-icons:astro',
-    },
-    {
-      name: 'Tailwind',
-      color: 'hover:text-cyan-400',
-      icon: 'file-icons:tailwind',
-    }
-  ],
-  [
-    {
-      name: 'Prisma',
-      color: 'hover:text-white',
-      icon: 'file-icons:prisma',
-    },
-    {
-      name: 'Postgres',
-      color: 'hover:text-blue-400',
-      icon: 'cib:postgresql',
-    },
-    {
-      name: 'MongoDB',
-      color: 'hover:text-green-400',
-      icon: 'cib:mongodb',
-    }
-  ],
-  [
-    {
-      name: 'Photoshop',
-      color: 'hover:text-cyan-400',
-      icon: 'simple-icons:adobephotoshop',
-    },
-    {
-      name: 'Illustrator',
-      color: 'hover:text-orange-500',
-      icon: 'simple-icons:adobeillustrator',
-    },
-    {
-      name: 'Figma',
-      color: 'hover:text-pink-400',
-      icon: 'simple-icons:figma',
-    }
-  ],
+    [
+        {
+            name: 'TypeScript',
+            color: 'hover:text-sky-500',
+            icon: 'simple-icons:typescript',
+        },
+        {
+            name: 'Golang',
+            color: 'hover:text-cyan-400',
+            icon: 'mdi:language-go',
+        },
+        {
+            name: 'Docker',
+            color: 'hover:text-sky-500',
+            icon: 'cib:docker',
+        },
+    ],
+    [
+        {
+            name: 'React',
+            color: 'hover:text-sky-400',
+            icon: 'akar-icons:react-fill',
+        },
+        {
+            name: 'Next',
+            color: 'hover:text-white',
+            icon: 'akar-icons:nextjs-fill',
+        },
+        {
+            name: 'Tailwind',
+            color: 'hover:text-cyan-300',
+            icon: 'file-icons:tailwind',
+        },
+    ],
+    [
+        {
+            name: 'Prisma',
+            color: 'hover:text-white',
+            icon: 'file-icons:prisma',
+        },
+        {
+            name: 'Postgres',
+            color: 'hover:text-blue-400',
+            icon: 'cib:postgresql',
+        },
+        {
+            name: 'MongoDB',
+            color: 'hover:text-green-500',
+            icon: 'cib:mongodb',
+        },
+    ],
+    [
+        {
+            name: 'Photoshop',
+            color: 'hover:text-sky-500',
+            icon: 'simple-icons:adobephotoshop',
+        },
+        {
+            name: 'Illustrator',
+            color: 'hover:text-orange-600',
+            icon: 'simple-icons:adobeillustrator',
+        },
+        {
+            name: 'Figma',
+            color: 'hover:text-pink-500',
+            icon: 'simple-icons:figma',
+        },
+    ],
 ]
 ---
 
 <div class='flex flex-col basis-1/2 gap-4 px-5 md:px-10 py-4 md:py-8 border border-white/60 bg-white/5 rounded-md'>
-  <h2 class='font-pixel font-semibold text-white text-2xl sm:text-4xl'>Technologies</h2>
-  <p class='font-roboto font-normal text-white/80 text-lg'>Technologies I used to work with.</p>
-  <div class='flex flex-col md:flex-row justify-between gap-4 font-pixel font-normal text-white/80 text-base'>
-    {
-      technologies.map((technologieGroup) => {
-        return (
-          <ul class='flex flex-col gap-2 md:basis-1/2'>
-            {technologieGroup.map((technologie) => {
-              return (
-                <li class={`flex gap-2 ${technologie.color} hover:cursor-pointer`}>
-                  <Icon width='20px' name={technologie.icon} />
-                  <p>{technologie.name}</p>
-                </li>
-              )
-            })}
-            <hr class='block md:hidden opacity-30' />
-          </ul>
-        )
-      })
-    }
-  </div>
+    <h1 class='font-pixel font-semibold text-white text-2xl sm:text-4xl'>Skills</h1>
+    <div class='flex flex-col md:flex-row justify-between gap-4 font-pixel font-normal text-white/60 text-base'>
+        {
+            technologies.map((technologieGroup) => {
+                count++
+
+                return (
+                    <ul class='flex flex-col gap-2 md:basis-1/2'>
+                        {technologieGroup.map((technologie) => {
+                            return (
+                                <li class={`flex gap-2 ${technologie.color} hover:cursor-pointer`}>
+                                    <Icon width='20px' name={technologie.icon} />
+                                    <p>{technologie.name}</p>
+                                </li>
+                            )
+                        })}
+                        <hr class={`block md:hidden opacity-30 ${count == 4 ? 'hidden' : ''}`} />
+                    </ul>
+                )
+            })
+        }
+    </div>
+    <p class='font-inter font-normal text-white/60 text-lg italic'>- Here are some of the technologies I work with.</p>
 </div>

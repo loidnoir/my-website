@@ -9,8 +9,12 @@ module.exports = {
         // borderFill: rgba(255, 255, 255, 5)
       },
       fontFamily: {
-        'pixel': '\'Silkscreen\', cursive;',
-        'roboto': '\'Roboto\', sans-serif;'
+        'pixel': '\'Lexend Deca\', sans-serif;',
+        'inter': '\'Inter\', sans-serif;'
+      },
+      backgroundImage: {
+        'cards': 'url("/public/cards.svg")',
+        'noir': 'url("/public/noir.svg")',
       }
     },
   },
