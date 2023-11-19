@@ -19,5 +19,9 @@
   "dependencies": {
     "astro-icon": "^0.7.3",
     "astro-seo": "^0.6.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/loidnoir/my-website.git",
+  "author": "Samvel <loidnoir@gmail.com>",
+  "license": "MIT"
 }

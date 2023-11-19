@@ -11,20 +11,25 @@ interface technologie {
 const technologies: technologie[][] = [
     [
         {
+            name: 'Python',
+            color: 'hover:text-blue-400',
+            icon: 'akar-icons:python-fill',
+        },
+        {
             name: 'TypeScript',
             color: 'hover:text-sky-500',
             icon: 'simple-icons:typescript',
         },
         {
-            name: 'Golang',
-            color: 'hover:text-cyan-400',
-            icon: 'mdi:language-go',
+            name: 'JavaScript',
+            color: 'hover:text-yellow-400',
+            icon: 'simple-icons:javascript',
         },
         {
             name: 'Docker',
             color: 'hover:text-sky-500',
             icon: 'cib:docker',
-        },
+        }
     ],
     [
         {
@@ -38,10 +43,15 @@ const technologies: technologie[][] = [
             icon: 'akar-icons:nextjs-fill',
         },
         {
-            name: 'Tailwind',
-            color: 'hover:text-cyan-300',
-            icon: 'file-icons:tailwind',
+            name: 'Astro',
+            color: 'hover:text-red-500',
+            icon: 'simple-icons:astro',
         },
+        {
+            name: 'Tailwind',
+            color: 'hover:text-cyan-400',
+            icon: 'simple-icons:tailwindcss',
+        }
     ],
     [
         {
@@ -50,15 +60,20 @@ const technologies: technologie[][] = [
             icon: 'file-icons:prisma',
         },
         {
+            name: 'MongoDB',
+            color: 'hover:text-green-500',
+            icon: 'cib:mongodb',
+        },
+        {
             name: 'Postgres',
             color: 'hover:text-blue-400',
             icon: 'cib:postgresql',
         },
         {
-            name: 'MongoDB',
-            color: 'hover:text-green-500',
-            icon: 'cib:mongodb',
-        },
+            name: 'Redis',
+            color: 'hover:text-red-500',
+            icon: 'cib:redis',
+        }
     ],
     [
         {
@@ -72,17 +87,17 @@ const technologies: technologie[][] = [
             icon: 'simple-icons:adobeillustrator',
         },
         {
-            name: 'Figma',
-            color: 'hover:text-pink-500',
-            icon: 'simple-icons:figma',
-        },
+            name: 'Unreal Engine',
+            color: 'hover:text-white',
+            icon: 'mdi:unreal-engine',
+        }
     ],
 ]
 ---
 
 <div class='flex flex-col basis-1/2 gap-4 px-5 md:px-10 py-4 md:py-8 border border-white/60 bg-white/5 rounded-md'>
-    <h1 class='font-pixel font-semibold text-white text-2xl sm:text-4xl'>Skills</h1>
-    <div class='flex flex-col md:flex-row justify-between gap-4 font-pixel font-normal text-white/60 text-base'>
+    <!-- <h1 class='font-pixel font-semibold text-white text-2xl sm:text-4xl'>Skills</h1> -->
+    <div class='flex flex-col md:flex-row justify-between gap-4 font-quicksand font-medium text-white/60 text-base'>
         {
             technologies.map((technologieGroup) => {
                 count++
@@ -103,5 +118,7 @@ const technologies: technologie[][] = [
             })
         }
     </div>
-    <p class='font-inter font-normal text-white/60 text-lg italic'>- Here are some of the technologies I work with.</p>
+    <p class='font-quicksand font-normal text-white/60 text-lg italic'>
+        Some of the technologies I use
+    </p>
 </div>
